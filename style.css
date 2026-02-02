@@ -1,0 +1,15 @@
+a {
+  display:block;
+  text-align:center;
+  margin:10px;
+  color:slateblue;
+  background-color: white;
+  font-size: 20px;
+  border-radius:10px;
+  padding:10px;}
+img{border-radius: 75px;}
+h2 {font-size: 18px;}
+body{text-align: center;
+  background-color: slateblue;
+    font-family:Trebuchet MS;
+    color:white;}
