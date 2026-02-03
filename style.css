@@ -1,0 +1,103 @@
+/* Reset minimal */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+h1 { margin: 0 0 .25rem; font-size: clamp(1.25rem, 3vw, 2rem); }
+h2 { margin: 0 0 1rem; font-size: clamp(1rem, 2.2vw, 1.25rem); color: #555; }
+
+.linkedin {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background: #0a66c2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Ajout pour boutons côte à côte */
+.actions {
+  display: inline-flex;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: .75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform .12s ease, box-shadow .12s ease;
+  border: 1px solid transparent;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn.linkedin { background: #0a66c2; color: #fff; }
+.btn.secondary {
+  background: transparent;
+  border-color: #ddd;
+  color: #333;
+}
+
+.bio {
+  margin: 1rem auto 0;
+  max-width: 680px;
+  color: #333;
+  font-size: clamp(0.96rem, 1.8vw, 1.05rem);
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0.9rem 1.1rem;
+  border-left: 4px solid #0a66c2;
+  background: rgba(10,102,194,0.04);
+  border-radius: 6px;
+  hyphens: auto;
+  word-break: break-word;
+}
+
+/* Petits écrans */
+@media (max-width: 480px) {
+  .container { padding: 1rem; }
+  .avatar { max-width: 50%; }
+  .bio {
+    max-width: 100%;
+    padding: 0.7rem;
+    font-size: 0.98rem;
+  }
+}
+
+/* Petits écrans — empile les boutons si besoin */
+@media (max-width: 420px) {
+  .actions { flex-direction: column; gap: .5rem; }
+  .btn { width: 100%; text-align: center; }
+}
