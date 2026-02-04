@@ -9,12 +9,34 @@
     <div class="container">
       <img class="avatar" src="adrien_spada.png" alt="Adrien Spada" />
       <h1>Adrien Spada</h1>
-      <h2>Maintenance informatique & téléphonie</h2>
-      <p class="bio">Créateur et dirigeant de l’entreprise SITUX pendant 8 ans, j’ai assuré son développement complet, de la gestion technique à la stratégie commerciale. J’ai également acquis et fusionné une seconde société spécialisée dans les clés et cartes automobiles, renforçant ainsi la polyvalence du service. Cette expérience m’a permis de développer une solide expertise en maintenance informatique, téléphonie, électronique et produits Apple.</p>
+      <h2>Technicien expert en maintenance informatique & téléphonie</h2>
+      <p class="bio">Créateur et <strong>dirigeant</strong> de l’entreprise <strong>SITUX</strong> pendant <strong>8 ans</strong>, j’ai assuré son développement complet, de la <strong>gestion technique</strong> à la <strong>stratégie commerciale</strong>. J’ai également <strong>acquis et fusionné</strong> une seconde société spécialisée dans les <strong>clés et cartes automobiles</strong>, renforçant ainsi la <strong>polyvalence du service</strong>. Cette expérience m’a permis de développer une <strong>solide expertise</strong> en <strong>maintenance informatique</strong>, <strong>téléphonie</strong>, <strong>électronique</strong> et <strong>produits Apple</strong>.</p>
       <div class="actions">
         <a class="btn linkedin" href="https://www.linkedin.com/in/adrienspada" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="btn secondary" href="CV_Adrien_Spada.pdf" target="_blank" rel="noopener noreferrer">Voir le CV</a>
+        <a class="btn secondary" id="toggleBio" href="#" role="button">Centres d'intérêts</a>
       </div>
     </div>
+    <script>
+      (function(){
+        const bioEl = document.querySelector('.bio');
+        const btn = document.getElementById('toggleBio');
+        if (!bioEl || !btn) return;
+        const original = bioEl.innerHTML.trim();
+        const interests = `Plongeur <strong>Niveau 3</strong>, je suis <strong>formateur</strong> en <strong>biologie marine</strong> auprès de la <strong>Fédération Française de Plongée</strong>. Passionné par le monde sous-marin autant que par la <strong>technologie</strong>, je m’intéresse à la <strong>programmation</strong> et au <strong>montage vidéo</strong>, que j’utilise notamment pour <strong>valoriser et transmettre mes connaissances</strong>. <strong>Curieux, rigoureux et créatif</strong>, j’aime explorer, comprendre et partager — sous l’eau comme derrière un écran`;
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          if (btn.dataset.state === 'interests') {
+            bioEl.innerHTML = original;
+            btn.textContent = "Centres d'intérêts";
+            btn.dataset.state = '';
+          } else {
+            bioEl.innerHTML = interests;
+            btn.textContent = "Mon parcours professionnel";
+            btn.dataset.state = 'interests';
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
