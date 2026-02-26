@@ -9,34 +9,21 @@
     <div class="container">
       <img class="avatar" src="adrien_spada.png" alt="Adrien Spada" />
       <h1>Adrien Spada</h1>
-      <h2>Technicien expert en maintenance informatique & téléphonie</h2>
-      <p class="bio">Créateur et dirigeant de I'entreprise SITUX pendant 14 ans, j'ai assuré son développement, de la gestion technique à la stratégie commerciale, en passant par le management de tous les employés. Je suis aujourd'hui à la recherche d'un poste de technicien informatique.</p>
+      <h2>Responsable Technique & Ex-Dirigeant (15 ans d'expéreince)</h2>
+      <p class="bio" aria-live="polite">Passionné d'informatique depuis l'âge de 9 ans, j'ai transformé cette
+vocation en une réussite entrepreneuriale concrète : la création, le
+développement (470 k€ de CA, 5 salariés) et la cession réussie de mon
+entreprise de services numériques.<br> <br>Expert polyvalent (systèmes Linux,
+réseaux, hardware), je souhaite aujourd'hui mettre mon leadership et
+mon sens du résultat au service d'un nouveau défi collectif.
+</p>
       <div class="actions">
         <a class="btn linkedin" href="https://www.linkedin.com/in/adrienspada" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="btn secondary" href="CV_Adrien_Spada.pdf" target="_blank" rel="noopener noreferrer">Voir le CV</a>
         <a class="btn secondary" id="toggleBio" href="#" role="button">Centres d'intérêts</a>
+        <a class="btn secondary" href="https://www.coursera.org/account/accomplishments/professional-cert/OIUOBPLSZBON" target="_blank" rel="noopener noreferrer">Certifications</a>
       </div>
     </div>
-    <script>
-      (function(){
-        const bioEl = document.querySelector('.bio');
-        const btn = document.getElementById('toggleBio');
-        if (!bioEl || !btn) return;
-        const original = bioEl.innerHTML.trim();
-        const interests = `Plongeur <strong>Niveau 3</strong>, je suis <strong>formateur</strong> en <strong>biologie marine</strong> auprès de la <strong>Fédération Française de Plongée</strong>. Passionné par le monde sous-marin autant que par la <strong>technologie</strong>, je m’intéresse à la <strong>programmation</strong> et au <strong>montage vidéo</strong>, que j’utilise notamment pour <strong>valoriser et transmettre mes connaissances</strong>. <strong>Curieux, rigoureux et créatif</strong>, j’aime explorer, comprendre et partager — sous l’eau comme derrière un écran`;
-        btn.addEventListener('click', function(e){
-          e.preventDefault();
-          if (btn.dataset.state === 'interests') {
-            bioEl.innerHTML = original;
-            btn.textContent = "Centres d'intérêts";
-            btn.dataset.state = '';
-          } else {
-            bioEl.innerHTML = interests;
-            btn.textContent = "Mon parcours professionnel";
-            btn.dataset.state = 'interests';
-          }
-        });
-      })();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
