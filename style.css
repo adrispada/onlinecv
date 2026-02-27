@@ -84,7 +84,19 @@ h2 { margin: 0 0 1rem; font-size: clamp(1rem, 2.2vw, 1.25rem); color: #555; }
   hyphens: auto;
   word-break: break-word;
 }
-
+.footer {
+     margin: 1rem auto 0;
+    max-width: 680px;
+    color: rgba(100, 100, 100, 0.9);
+    font-size: clamp(0.96rem, 1.8vw, 1.05rem);
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0.9rem 1.1rem;
+    border-radius: 6px;
+    hyphens: auto;
+    word-break: break-word;
+    font-style: italic;
+}
 /* Petits écrans */
 @media (max-width: 480px) {
   .container { padding: 1rem; }
